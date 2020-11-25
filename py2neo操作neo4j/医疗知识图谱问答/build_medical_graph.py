@@ -12,9 +12,9 @@ from py2neo import Graph, Node
 
 class MedicalGraph:
     def __init__(self):
-        # 考虑电脑性能  这里可以选少量的数据集进行练习
-        self.data_path = './medical.json'
+        self.data_path = './data/medical_min.json'
         self.g = Graph()   # 这里填自己的信息
+        self.g.delete_all()  # 将之前的图  全部删除
 
     def read_nodes(self):
         # 共７类节点
@@ -226,6 +226,7 @@ class MedicalGraph:
         count = 0
         # 去重处理
         set_edges = []
+
         for edge in edges:
             set_edges.append('###'.join(edge))
 
