@@ -1,3 +1,10 @@
+--------------2020-12-9 更新----------------------
+这里不建议用ltp做三元组抽取，最近学习了一个深度学习模型进行三元组抽取  在我的另一个仓库
+
+[链接](https://github.com/shawroad/NLP_pytorch_project/tree/master/relation_extraction/lstm_cnn_information_extract)
+
+
+--------------2020-11-28更新----------------------
 迪哥使用的是pyltp。 这里我不推荐用pyltp，这个包目前已经不更新了。已经是老古董了。加载的模型估计也过时了。
 
 这里我推荐使用ltp
