@@ -4,7 +4,7 @@
 [链接](https://github.com/shawroad/NLP_pytorch_project/tree/master/relation_extraction/lstm_cnn_information_extract)
 
 
---------------2020-11-28更新----------------------
+--------------2020-11-28 更新----------------------
 迪哥使用的是pyltp。 这里我不推荐用pyltp，这个包目前已经不更新了。已经是老古董了。加载的模型估计也过时了。
 
 这里我推荐使用ltp
