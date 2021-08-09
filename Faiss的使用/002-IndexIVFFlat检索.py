@@ -27,6 +27,7 @@ if __name__ == '__main__':
     quantizer = faiss.IndexFlatL2(d)
     # 量化器索引
     index = faiss.IndexIVFFlat(quantizer, d, nlist, faiss.METRIC_L2)
+
     # 指定用L2距离进行搜索，若不指定默认为內积
     assert not index.is_trained
     index.train(xb)
@@ -36,4 +37,5 @@ if __name__ == '__main__':
     # 向量添加
     D, I = index.search(xq, k)
     # 检索
+    print(D[:5])
     print(I[:5])
