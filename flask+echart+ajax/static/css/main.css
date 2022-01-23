@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+	background: #333;
+}
+
+#left {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	background: #666666;
+	/* color: white; */
+}
+
+#right {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0%;
+	right: 0%;
+	color: #FFFFFF;
+	/* font-size: 20px; */
+	background: green;
+}
