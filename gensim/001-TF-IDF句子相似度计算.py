@@ -9,8 +9,10 @@ from gensim import corpora, models, similarities
 import numpy as np
 import linecache
 
+from importlib import resources
 
-def similarity(query_path, query):
+
+def similarity(query_file, query):
     '''
     :param query_path: 问题库的路径
     :param query: 所提的问题
@@ -18,7 +20,7 @@ def similarity(query_path, query):
     '''
     # 对问题库中的问题处理
     questions = []
-    with open(query_path, 'r', encoding='utf8') as f:
+    with resources.open_text('data', query_file, encoding='utf8') as f:
         for line in f.readlines():
             line = line.strip()
             line = jieba.lcut(line)
@@ -70,17 +72,18 @@ def get_answer(answer_path, row_index):
     :param row_index: 答案的行索引
     :return:
     """
+    resources.path
     answer = linecache.getline(answer_path, row_index)
     return answer
 
 
 if __name__ == '__main__':
-    answer_path = './data/answer.txt'
-    query_path = './data/question.txt'
+    answer_path = 'answer.txt'
+    query_path = 'question.txt'
 
     # 加载停用词
     stopword = []
-    with open('./data/stopwords.txt', 'r', encoding='utf8') as f:
+    with resources.open_text('data', 'stopwords.txt', encoding='utf8') as f:
         for line in f.readlines():
             line = line.strip()
             stopword.append(line)

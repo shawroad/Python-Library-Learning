@@ -9,7 +9,6 @@ import numpy as np
 import time
 
 
-
 if __name__ == '__main__':
     d = 512   # 向量维度
     nb = 300000   # 向量库的大小
