@@ -102,3 +102,6 @@ with gr.Blocks() as demo:
     emptyBtn.click(reset_state, outputs=[chatbot, history], show_progress=True)
 
 demo.queue().launch(share=False, inbrowser=True)
+# 如果想加登录
+# zhanghu = [["xiaolu", "1234"]]
+# demo.queue().launch(share=True, server_name='0.0.0.0', server_port=6006, auth=zhanghu, auth_message='请联系xiaolu认证进行访问')
